@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python From Zero — Learn Python Using Only Your Phone</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#172033;line-height:1.6}
+header{background:#111827;color:white;padding:42px 20px}
+.hero{max-width:1050px;margin:auto}
+.badge{display:inline-block;background:#fbbf24;color:#111827;padding:6px 12px;border-radius:999px;font-weight:700;font-size:13px}
+h1{font-size:42px;line-height:1.1;margin:15px 0}
+.hero p{font-size:18px;max-width:720px;color:#d1d5db}
+.btn{display:inline-block;background:#fbbf24;color:#111827;text-decoration:none;padding:12px 18px;border-radius:8px;font-weight:700;margin-top:10px}
+.layout{max-width:1050px;margin:28px auto;display:grid;grid-template-columns:280px 1fr;gap:22px;padding:0 16px}
+nav,.card{background:white;border-radius:14px;box-shadow:0 4px 18px #0000000d}
+nav{padding:18px;position:sticky;top:15px;height:max-content}
+nav h3{margin-top:0}
+nav a{display:block;padding:9px 10px;color:#374151;text-decoration:none;border-radius:7px}
+nav a:hover{background:#eef2ff}
+main{min-width:0}
+.card{padding:25px;margin-bottom:20px}
+h2{margin-top:0;font-size:28px}
+h3{font-size:20px}
+code{background:#eef2f7;padding:2px 5px;border-radius:4px}
+pre{background:#111827;color:#e5e7eb;padding:16px;border-radius:10px;overflow:auto}
+.lesson{border-left:4px solid #6366f1;padding-left:16px;margin:20px 0}
+.quiz{background:#f8fafc;border:1px solid #e5e7eb;padding:18px;border-radius:10px;margin-top:18px}
+.quiz button{display:block;width:100%;text-align:left;margin:7px 0;padding:10px;border:1px solid #d1d5db;background:white;border-radius:7px;cursor:pointer}
+.quiz button:hover{background:#eef2ff}
+.result{font-weight:700;margin-top:10px}
+.progress{height:10px;background:#e5e7eb;border-radius:99px;overflow:hidden}
+.progress div{height:100%;width:0;background:#6366f1;transition:.3s}
+.small{color:#6b7280;font-size:14px}
+.project{background:#ecfdf5;border:1px solid #a7f3d0}
+footer{background:#111827;color:#d1d5db;text-align:center;padding:30px;margin-top:40px}
+@media(max-width:800px){.layout{grid-template-columns:1fr}nav{position:static}h1{font-size:34px}}
+</style>
+</head>
+<body>
+<header>
+<div class="hero">
+<span class="badge">BEGINNER COURSE</span>
+<h1>Python From Zero 📱</h1>
+<p>Learn Python from scratch using only your phone. Build real beginner projects without assuming you already know how to code.</p>
+<a class="btn" href="#module1">Start the course</a>
+</div>
+</header>
+
+<div class="layout">
+<nav>
+<h3>Course progress</h3>
+<div class="progress"><div id="bar"></div></div>
+<p class="small" id="progressText">0% complete</p>
+<a href="#module1">1. Getting Started</a>
+<a href="#module2">2. Variables</a>
+<a href="#module3">3. Input & Output</a>
+<a href="#module4">4. If Statements</a>
+<a href="#module5">5. Functions</a>
+<a href="#module6">6. Lists</a>
+<a href="#module7">7. Loops</a>
+<a href="#module8">8. Final Project</a>
+</nav>
+
+<main>
+<section class="card">
+<h2>How to use this course</h2>
+<ol>
+<li>Read one lesson at a time.</li>
+<li>Type the code yourself instead of only copying it.</li>
+<li>Complete the exercise before checking the answer.</li>
+<li>Take the quiz.</li>
+<li>Build the final project without looking at the solution first.</li>
+</ol>
+<p><strong>Recommended setup:</strong> Install a Python app such as Pydroid 3 on Android, then create a new Python file.</p>
+</section>
+
+<section class="card" id="module1">
+<h2>Module 1 — Your First Python Program</h2>
+<div class="lesson">
+<h3>What is programming?</h3>
+<p>Programming means giving a computer instructions. Python is a programming language that lets us write those instructions in a readable way.</p>
+<h3>Your first program</h3>
+<pre>print("Hello, world!")</pre>
+<p><code>print()</code> tells Python to display something on the screen.</p>
+</div>
+<h3>Practice</h3>
+<p>Write a program that prints your name, your university, and your favourite game.</p>
+<pre>print("My name is Scott")
+print("I am a Computer Science student")
+print("My favourite game is ...")</pre>
+<div class="quiz">
+<strong>Quiz:</strong> What does <code>print()</code> do?
+<button onclick="answer(this,true)">A. Displays information</button>
+<button onclick="answer(this,false)">B. Deletes a program</button>
+<button onclick="answer(this,false)">C. Creates a phone</button>
+<div class="result"></div>
+</div>
+<button class="btn" onclick="complete('module1')">Mark Module 1 Complete</button>
+</section>
+
+<section class="card" id="module2">
+<h2>Module 2 — Variables</h2>
+<div class="lesson">
+<p>A variable stores information so that we can use it later.</p>
+<pre>name = "Scott"
+age = 20
+print(name)
+print(age)</pre>
+<p>Text is called a <strong>string</strong>. Whole numbers are commonly stored as <strong>integers</strong>.</p>
+</div>
+<h3>Practice</h3>
+<pre>student = "Alex"
+mark = 78
+print(student)
+print(mark)</pre>
+<p>Change the values to your own information.</p>
+<div class="quiz">
+<strong>Quiz:</strong> What is stored in <code>age</code> here?
+<pre>age = 20</pre>
+<button onclick="answer(this,true)">A. The number 20</button>
+<button onclick="answer(this,false)">B. The word age</button>
+<button onclick="answer(this,false)">C. A function</button>
+<div class="result"></div>
+</div>
+<button class="btn" onclick="complete('module2')">Mark Module 2 Complete</button>
+</section>
+
+<section class="card" id="module3">
+<h2>Module 3 — Input and Output</h2>
+<div class="lesson">
+<p><code>input()</code> allows the user to enter information.</p>
+<pre>name = input("Enter your name: ")
+print("Hello", name)</pre>
+<p>Important: <code>input()</code> normally gives you text. If you need a number, convert it.</p>
+<pre>age = int(input("Enter your age: "))
+print(age + 1)</pre>
+</div>
+<h3>Mini Project — Age Checker Input</h3>
+<pre>name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+print("Hello", name)
+print("Next year you will be", age + 1)</pre>
+<div class="quiz">
+<strong>Quiz:</strong> Why do we use <code>int(input(...))</code> for a number?
+<button onclick="answer(this,true)">A. To convert the entered text into an integer</button>
+<button onclick="answer(this,false)">B. To print the number twice</button>
+<button onclick="answer(this,false)">C. To stop Python</button>
+<div class="result"></div>
+</div>
+<button class="btn" onclick="complete('module3')">Mark Module 3 Complete</button>
+</section>
+
+<section class="card" id="module4">
+<h2>Module 4 — If Statements</h2>
+<div class="lesson">
+<p>Programs often need to make decisions. An <code>if</code> statement lets Python choose what to do based on a condition.</p>
+<pre>age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are under 18")</pre>
+<p>Notice the indentation. The indented lines belong to the <code>if</code> or <code>else</code>.</p>
+</div>
+<h3>Mini Project — Pass or Fail</h3>
+<pre>mark = int(input("Enter your mark: "))
+
+if mark >= 50:
+    print("PASS")
+else:
+    print("FAIL")</pre>
+<div class="quiz">
+<strong>Quiz:</strong> What happens when <code>mark = 40</code>?
+<button onclick="answer(this,false)">A. PASS</button>
+<button onclick="answer(this,true)">B. FAIL</button>
+<button onclick="answer(this,false)">C. Python ignores the condition</button>
+<div class="result"></div>
+</div>
+<button class="btn" onclick="complete('module4')">Mark Module 4 Complete</button>
+</section>
+
+<section class="card" id="module5">
+<h2>Module 5 — Functions</h2>
+<div class="lesson">
+<p>A function is a reusable block of code.</p>
+<pre>def greet():
+    print("Hello!")
+
+greet()</pre>
+<p>Functions can accept information called parameters.</p>
+<pre>def greet(name):
+    print("Hello", name)
+
+greet("Scott")</pre>
+<p><code>return</code> sends a result back to the place where the function was called.</p>
+<pre>def add(a, b):
+    return a + b
+
+answer = add(5, 3)
+print(answer)</pre>
+</div>
+<h3>Practice</h3>
+<p>Create a function called <code>square</code> that receives a number and returns the number multiplied by itself.</p>
+<pre>def square(number):
+    return number * number</pre>
+<div class="quiz">
+<strong>Quiz:</strong> What does <code>return</code> do?
+<button onclick="answer(this,true)">A. Sends a value back from the function</button>
+<button onclick="answer(this,false)">B. Repeats the function forever</button>
+<button onclick="answer(this,false)">C. Deletes the function</button>
+<div class="result"></div>
+</div>
+<button class="btn" onclick="complete('module5')">Mark Module 5 Complete</button>
+</section>
+
+<section class="card" id="module6">
+<h2>Module 6 — Lists</h2>
+<div class="lesson">
+<p>A list stores multiple values in one variable.</p>
+<pre>subjects = ["Math", "Python", "English"]
+
+print(subjects)
+print(subjects[0])</pre>
+<p>Python starts counting list positions from <strong>0</strong>.</p>
+<h3>Adding an item</h3>
+<pre>subjects.append("Computing")</pre>
+</div>
+<h3>Practice</h3>
+<p>Create a list containing five foods you like. Print the first item.</p>
+<div class="quiz">
+<strong>Quiz:</strong> What is the index of the first item in a Python list?
+<button onclick="answer(this,true)">A. 0</button>
+<button onclick="answer(this,false)">B. 1</button>
+<button onclick="answer(this,false)">C. -1</button>
+<div class="result"></div>
+</div>
+<button class="btn" onclick="complete('module6')">Mark Module 6 Complete</button>
+</section>
+
+<section class="card" id="module7">
+<h2>Module 7 — Loops</h2>
+<div class="lesson">
+<p>Loops repeat code.</p>
+<pre>for i in range(5):
+    print(i)</pre>
+<p>This prints 0, 1, 2, 3 and 4.</p>
+<p>You can also loop through a list:</p>
+<pre>subjects = ["Math", "Python", "English"]
+
+for subject in subjects:
+    print(subject)</pre>
+</div>
+<h3>Practice</h3>
+<p>Make a list of three games and use a <code>for</code> loop to print each one.</p>
+<div class="quiz">
+<strong>Quiz:</strong> What is the main purpose of a loop?
+<button onclick="answer(this,true)">A. Repeat instructions</button>
+<button onclick="answer(this,false)">B. Store only one number</button>
+<button onclick="answer(this,false)">C. Close Python</button>
+<div class="result"></div>
+</div>
+<button class="btn" onclick="complete('module7')">Mark Module 7 Complete</button>
+</section>
+
+<section class="card project" id="module8">
+<h2>Module 8 — Final Project: Student Grade Calculator 🎓</h2>
+<p>Now combine variables, input, calculations, functions and conditions into one program.</p>
+<h3>Requirements</h3>
+<ul>
+<li>Ask for the student's name.</li>
+<li>Ask for three marks.</li>
+<li>Calculate the average.</li>
+<li>Display PASS or FAIL.</li>
+<li>Display a simple grade.</li>
+</ul>
+<h3>Starter code</h3>
+<pre>name = input("Enter your name: ")
+
+math = float(input("Enter Math mark: "))
+python = float(input("Enter Python mark: "))
+english = float(input("Enter English mark: "))
+
+average = (math + python + english) / 3
+
+print("Student:", name)
+print("Average:", average)
+
+if average >= 50:
+    print("Status: PASS")
+else:
+    print("Status: FAIL")</pre>
+
+<h3>Challenge</h3>
+<p>Add these grades:</p>
+<ul>
+<li>80–100 = A</li>
+<li>70–79 = B</li>
+<li>60–69 = C</li>
+<li>50–59 = D</li>
+<li>Below 50 = F</li>
+</ul>
+
+<h3>Final test</h3>
+<div class="quiz">
+<strong>Question:</strong> Which concept is used to make the PASS/FAIL decision?
+<button onclick="answer(this,false)">A. List</button>
+<button onclick="answer(this,true)">B. If statement</button>
+<button onclick="answer(this,false)">C. Comment</button>
+<div class="result"></div>
+</div>
+<button class="btn" onclick="complete('module8')">Complete Final Project</button>
+</section>
+
+<section class="card">
+<h2>Course completion</h2>
+<p>Finish all 8 modules and build the final project. This page stores your progress in your browser.</p>
+<div id="certificate" style="display:none">
+<h3>🎉 Course Completed!</h3>
+<p>You completed <strong>Python From Zero</strong>.</p>
+<p class="small">This is a personal course-completion acknowledgement, not an accredited qualification.</p>
+</div>
+</section>
+</main>
+</div>
+
+<footer>
+<p><strong>Python From Zero</strong> — Beginner coding course</p>
+<p>Built as a practical learning project.</p>
+</footer>
+
+<script>
+const modules = ["module1","module2","module3","module4","module5","module6","module7","module8"];
+let completed = JSON.parse(localStorage.getItem("pythonCourseProgress") || "[]");
+
+function updateProgress(){
+  const pct = Math.round((completed.length/modules.length)*100);
+  document.getElementById("bar").style.width = pct + "%";
+  document.getElementById("progressText").textContent = pct + "% complete";
+  if(completed.length === modules.length){
+    document.getElementById("certificate").style.display = "block";
+  }
+}
+function complete(id){
+  if(!completed.includes(id)) completed.push(id);
+  localStorage.setItem("pythonCourseProgress", JSON.stringify(completed));
+  updateProgress();
+  alert("Module completed! Keep going.");
+}
+function answer(button, correct){
+  const box = button.parentElement;
+  const result = box.querySelector(".result");
+  result.textContent = correct ? "Correct ✅" : "Not quite ❌ — try again.";
+  result.style.color = correct ? "green" : "crimson";
+}
+updateProgress();
+</script>
+</body>
+</html>
